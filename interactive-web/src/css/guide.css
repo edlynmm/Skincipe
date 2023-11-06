@@ -1,0 +1,238 @@
+.did-you-know {
+    background: url("../images/did-you-know.png");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.did-you-know .container {
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.did-you-know h2 {
+    font-size: 30px;
+}
+
+.did-you-know p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.vitamins {
+    background: url("../images/vitamins.png");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.vitamins-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+
+.vitamins .vitamin-card {
+    position: relative;
+}
+
+.vitamins .vitamin-card div {
+    height: 290px;
+    width: 290px;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--gray-3);
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+
+.vitamins .vitamin-card img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* GUIDE */
+.guide {
+    background: url("../images/guide.png");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.guide .container.padding {
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.guide h2 {
+    font-size: 64px;
+}
+
+.guide p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.guide-descriptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.guide-card {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guide-card:nth-child(even) {
+    background-color: var(--gray-1);
+}
+
+.guide-card__head {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.guide-card__head .number {
+    font-size: 64px;
+}
+.guide-card__head .title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.guide-card p {
+    font-size: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .did-you-know {
+        background: url("../images/did-you-know.png");
+        background-position: center;
+        background-size: cover;
+        padding: 100px 0;
+    }
+
+    .did-you-know .container.padding {
+        padding: 40px 24px;
+        font-size: 40px;        
+    }
+
+    .did-you-know h2 {
+        font-size: 24px;
+    }
+
+    .did-you-know p {
+        font-size: 16px;
+    }
+
+    .vitamins {
+        padding: 24px;
+    }
+
+    .vitamins.section  .container.padding{
+        padding: 20px;
+    }
+
+    .vitamins-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .vitamins .vitamin-card {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .vitamins .vitamin-card div {
+        height: 200px;
+        width: 200px;
+        font-size: 24px;
+    }
+
+    .vitamins .vitamin-card img {
+        top: 7px;
+        right: 7px;
+    }
+
+    .guide {
+        padding: 80px 0;
+    }
+
+    .guide .container.padding {
+        padding: 24px;
+        color: white;
+        font-size: 32px;
+    }
+
+    .guide h2 {
+        font-size: 32px;
+    }
+
+    .guide p {
+        font-size: 16px;
+    }
+
+    .guide-descriptions {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-card {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .guide-card__head {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .guide-card__head .number {
+        font-size: 32px;
+    }
+    .guide-card__head .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .guide-card p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,44 @@
+.header {
+    background-color: white;
+    position: sticky;
+    top: -90px;
+    z-index: 5;
+    transition: all 300ms ease-in-out;
+}
+
+.header .logo {
+    text-align: center;
+    font-size: 30px;
+    padding: 24px 0;
+    border-bottom: 1px solid black;
+    display: block;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    text-align: center;
+    gap: 12px;
+}
+
+.header .nav .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    transition: all ease-in-out 300ms;
+}
+
+.header .nav .nav__link:hover,
+.header .nav .nav__link.active {
+    text-decoration: underline;
+    color: var(--gray-2);
+}
+
+.header .nav .separator {
+    width: 1px;
+    height: 50px;
+    background-color: black;
+}

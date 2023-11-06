@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SKINCIPE | Landing Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="src/js/data.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/concern.js"></script>
+    <script src="src/js/guide.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="logo">SKINCIPE.</a>
+        <div class="nav">
+            <a class="nav__link" onclick="handleChangeHome()" href="#skin-concern">Skin Concern</a>
+            <div class="separator"></div>
+            <a class="nav__link" onclick="handleChangeSection(2)" href="#skincare-recipes">Skincare Recipes</a>
+            <div class="separator"></div>
+            <a class="nav__link" onclick="handleChangeSection(3)" href="#shopping-guide">Shopping Guide</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero home">
+            <div class="container">                
+                <div class="hero__info">
+                    <div class="left-section" id="left-hero">
+                        <h1>THE KEY TO SUCCESSFUL SKINCARE</h1>
+                        <sl-button variant="default" href="#knowledge" style="width: auto" class="open-dialog dialog-get-started">
+                            <sl-icon slot="suffix" name="arrow-right"></sl-icon>
+                            Get Started
+                        </sl-button>
+                    </div>
+
+                    <div class="right-section" id="right-hero">
+                        <ul>
+                            <li>Know your skin condition</li>
+                            <li>Get the right skincare routine</li>
+                            <li>Use every ingredients effectively</li>
+                            <li>Get your skincare shopping guide</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <sl-carousel autoplay loop pagination>
+                <sl-carousel-item>
+                    <img alt="Skin care illustration" src="./src/images/hero-1.png" />
+                </sl-carousel-item>
+                <sl-carousel-item>
+                    <img alt="Skin care illustration" src="./src/images/hero-2.png" />
+                </sl-carousel-item>
+                <sl-carousel-item>
+                    <img alt="Skin care illustration" src="./src/images/hero-3.png" />
+                </sl-carousel-item>
+            </sl-carousel>
+        </section>
+
+        <section class="sub-hero home anchor" id="knowledge">
+            <p class="">63% of women lack of knowledge about their skin condition...</p>
+            <a href="#skin-concern" class="animate-move">
+                <img src="./src/images/chevron-down.svg" alt="chevron down" />
+            </a>
+        </section>
+
+        <!-- CONCERN SECTION -->
+        <section class="concern main-section anchor home" id="skin-concern">
+            <div class="container padding">
+                <h2>SELECT YOUR SKIN CONCERN</h2>
+                <div class="concern-containers">
+                    <div class="concern-container"></div>
+                </div>                
+            </div>
+        </section>
+
+        <section class="routine section section-1">
+            <div class="container padding">
+                <h2>RECOMMENDED SKINCARE ROUTINE</h2>
+                <button class="home-button">
+                    <img src="./src/images/home.svg" width="70" height="70" alt="home icon" />
+                </button>
+                <div class="routine-container">
+                    <div class="item-left item">
+                        <img src="./src/images/sc-1.svg" height="100" width="100" alt="skin care icon" />
+                        <div>1</div>
+                        <div class="name">Face Wash</div>
+                        <button class="book-btn" id="book-1">
+                            <img src="./src/images/book.svg" alt="book icon" />
+                        </button>
+                    </div>
+
+                    <div class="item-left item">
+                        <img src="./src/images/sc-3.svg" height="100" width="100" alt="skin care icon" />
+                        <div>2</div>
+                        <div class="name">Toner</div>
+                        <button class="book-btn" id="book-2">
+                            <img src="./src/images/book.svg" alt="book icon" />
+                        </button>
+                    </div>
+
+                    <div class="item-left item">
+                        <img src="./src/images/sc-2.svg" height="100" width="100" alt="skin care icon" />
+                        <div>3</div>
+                        <div class="name">Serum</div>
+                        <button class="book-btn" id="book-3">
+                            <img src="./src/images/book.svg" alt="book icon" />
+                        </button>
+                    </div>
+
+                    <div class="item-left item">
+                        <img src="./src/images/sc-5.svg" height="100" width="100" alt="skin care icon" />
+                        <div>4</div>
+                        <div class="name">Moisturizer</div>
+                        <button class="book-btn" id="book-4">
+                            <img src="./src/images/book.svg" alt="book icon" />
+                        </button>
+                    </div>
+
+                    <div class="item-left item last">
+                        <img src="./src/images/sc-1.svg" height="100" width="100" alt="skin care icon" />
+                        <div class="name">5</div>
+                        <div>Sunscreen</div>
+                        <button class="book-btn" id="book-5">
+                            <img src="./src/images/book.svg" alt="book icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <a onclick="handleChangeSection(2)" href="#skincare-recipes">
+                        <sl-icon-button name="arrow-right-circle" label="Go"
+                            style="font-size: 3.5rem; color: white"></sl-icon-button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECIPES SECTION -->
+        <section class="did-you-know main-section section section-2" id="skincare-recipes">
+            <div class="container padding">
+                <button class="home-button">
+                    <img src="./src/images/home.svg" width="70" height="70" alt="home icon" />
+                </button>
+
+                <div>!</div>
+                <h2>DID YOU KNOW</h2>
+                <p>
+                    There are some good ingredients for your skin concerns that may worsen your
+                    skin condition if you apply it all at once with several other ingredients
+                </p>
+                <button class="animate-move">
+                    <img src="./src/images/home-3.svg" alt="chevron down" />
+                </button>
+            </div>
+        </section>
+
+        <!-- DIALOG FOR RECIPES -->
+        <sl-dialog label="AHA" class="dialog-aha">
+            When using Alpha Hydroxy Acids (AHAs) for better skin texture, avoid combining them with certain ingredients
+            to prevent irritation and maintain effectiveness:
+            <ol>
+                <li>1. BHAs (e.g., salicylic acid): Use AHAs and BHAs separately to reduce the risk of irritation.</li>
+                <li>2. Retinoids (e.g., retinol, Retin-A): Alternate AHAs and retinoids on different days to minimize
+                    skin sensitivity.</li>
+                <li>3. Vitamin C (L-ascorbic acid): Apply AHAs in the evening and vitamin C in the morning to prevent
+                    skin irritation.</li>
+                <li>4. Niacinamide (vitamin B3): Use them separately or choose products that blend niacinamide and AHAs
+                    in lower concentrations.</li>
+                <li>5. Benzoyl Peroxide: If needed, use AHAs and benzoyl peroxide at different times or as directed by a
+                    dermatologist.</li>
+                <li>6. Physical Exfoliants: Avoid using abrasive scrubs on the same day as AHAs to protect your skin's
+                    barrier.</li>
+                <li>7. Fragranced Products: Opt for fragrance-free products to reduce the risk of skin sensitivity.</li>
+            </ol>
+            <sl-button slot="footer" variant="primary">Ok!</sl-button>
+        </sl-dialog>
+
+        <sl-dialog label="BHA" class="dialog-bha">
+            When using Beta Hydroxy Acid (BHA), or salicylic acid, in your skincare routine, it's essential to avoid
+            combining it with certain ingredients to prevent potential irritation or reduced effectiveness. Here's a
+            list of ingredients not recommended to be used with BHA:
+            <ol>
+                <li>1. Alpha Hydroxy Acids (AHAs): Combining BHA with AHAs like glycolic or lactic acid can increase the
+                    risk of skin irritation. Use them separately at different times.</li>
+                <li>2. Vitamin C (L-Ascorbic Acid): High concentrations of vitamin C, especially L-ascorbic acid, can be
+                    irritating when used with BHA. Use them at different times or on alternate days.</li>
+                <li>3. Retinoids (Retinol, Retin-A): BHA and retinoids may increase skin sensitivity and irritation when
+                    used together. Consider using them on different days or in separate routines.</li>
+                <li>4. Physical Exfoliants: Avoid using physical exfoliants (scrubs, brushes, abrasive cleansers)
+                    simultaneously with BHA to prevent excessive exfoliation and irritation.</li>
+                <li>5. Sulfur: Sulfur-based products may interact negatively with BHA, potentially causing irritation.
+                    It's best to use them separately.</li>
+                <li>6. Benzoyl Peroxide: Combining BHA with benzoyl peroxide, a common acne treatment, can lead to
+                    dryness and irritation. Use them in different routines.</li>
+                <li>7. Niacinamide: While most people can use niacinamide and BHA together without issues, some may
+                    experience flushing or temporary redness. Patch-test and introduce them gradually if needed.</li>
+            </ol>
+            <sl-button slot="footer" variant="primary">Ok!</sl-button>
+        </sl-dialog>
+
+        <sl-dialog label="Vitamin C" class="dialog-vitc">
+            Vitamin C is a potent skincare ingredient, but it can be sensitive to certain combinations. Avoid combining
+            it with:
+            <ol>
+                <li>1. Niacinamide: They may cancel each other out; use at different times.</li>
+                <li>2. Retinol: Applying them separately reduces potential irritation.</li>
+                <li>3. Alpha/Beta Hydroxy Acids: Apply vitamin C first to maintain effectiveness.</li>
+                <li>4. Benzoyl Peroxide: Using them together can cause skin irritation. Be cautious and test products
+                    gradually.</li>
+            </ol>
+            <sl-button slot="footer" variant="primary">Ok!</sl-button>
+        </sl-dialog>
+
+        <sl-dialog label="Niacinamide" class="dialog-niacinamide">
+            Niacinamide is a versatile skincare ingredient, but it should be used with caution alongside certain others
+            to avoid potential issues:
+            <ol>
+                <li>1. Vitamin C: High concentrations of L-ascorbic acid may cause skin flushing or irritation when
+                    combined with niacinamide. Consider using them at different times.</li>
+                <li>2. Alpha Hydroxy Acids (AHAs): AHAs like glycolic or lactic acid can lower niacinamide's pH,
+                    potentially reducing its effectiveness. Use them in separate routines or on alternate days.</li>
+                <li>3. Beta Hydroxy Acids (BHAs): BHAs, such as salicylic acid, may also affect niacinamide's pH. Apply
+                    them at different times or on different days.</li>
+                <li>4. Retinoids: Combining niacinamide with certain retinoids, like tretinoin, may cause irritation.
+                    Use them separately, with one in your morning routine and the other at night.</li>
+                <li>5. Benzoyl Peroxide: While there's no concrete evidence of conflict, some may experience temporary
+                    flushing or irritation using niacinamide and benzoyl peroxide together. If you do use them together,
+                    apply them at different times.</li>
+            </ol>
+            <sl-button slot="footer" variant="primary">Ok!</sl-button>
+        </sl-dialog>
+
+        <sl-dialog label="Retinoids" class="dialog-retinoids">
+            Certain ingredients can be irritating when combined with retinoids. Here's a list to be cautious of:
+            <ol>
+                <li>1. AHAs and BHAs: Like glycolic and salicylic acids, they can increase skin sensitivity.</li>
+                <li>2. Benzoyl Peroxide: May be too harsh and cause dryness.</li>
+                <li>3. Vitamin C: Best used separately due to potential irritation.</li>
+                <li>4. Essential Oils: Some, like citrus oils, can make skin more sensitive.</li>
+                <li>5. Fragrance: Opt for fragrance-free products.</li>
+                <li>6. Strong Physical Exfoliants: They can be abrasive; gentle exfoliation is better.</li>
+                <li>7. Prescription Medications: Consult your healthcare provider for interactions.</li>
+                <li>8. Multiple Active Ingredients: Avoid overloading your routine.</li>
+            </ol>
+            <sl-button slot="footer" variant="primary">Ok!</sl-button>
+        </sl-dialog>
+
+        <sl-dialog label="Benzoyl Peroxide" class="dialog-benzoyl">
+            Benzoyl peroxide is a common acne treatment, but it can be irritating when combined with certain other
+            ingredients. Avoid combining benzoyl peroxide with:
+            <ol>
+                <li>1. Retinoids: Using benzoyl peroxide and retinoids (like tretinoin) together can lead to excessive
+                    dryness, redness, and irritation.</li>
+                <li>2. Alpha Hydroxy Acids (AHAs) and Beta Hydroxy Acids (BHAs): Mixing benzoyl peroxide with AHAs or
+                    BHAs can increase the likelihood of skin irritation.</li>
+                <li>3. Vitamin C: Benzoyl peroxide can oxidize vitamin C, rendering it less effective.</li>
+                <li>4. Sulfur: Combining benzoyl peroxide and sulfur may increase the risk of skin irritation.</li>
+            </ol>
+            <sl-button slot="footer" variant="primary">Ok!</sl-button>
+        </sl-dialog>
+
+        <section class="vitamins section section-2">
+            <div class="container padding">
+                <div class="vitamins-container">
+                    <div class="vitamin-card" data-aos="fade-down" data-aos-delay="100">
+                        <div>AHA</div>
+                        <img class="open-dialog dialog-aha" src="./src/images/dark-book.svg" width="70" height="70"
+                            alt="book icon" />
+                    </div>
+                    <div class="vitamin-card" data-aos="fade-down" data-aos-delay="200">
+                        <div>Vitamin C</div>
+                        <img class="open-dialog dialog-vitc" src="./src/images/dark-book.svg" width="70" height="70"
+                            alt="book icon" />
+                    </div>
+                    <div class="vitamin-card" data-aos="fade-down" data-aos-delay="300">
+                        <div>Retinoids</div>
+                        <img class="open-dialog dialog-retinoids" src="./src/images/dark-book.svg" width="70" height="70"
+                            alt="book icon" />
+                    </div>
+                    <div class="vitamin-card" data-aos="fade-down" data-aos-delay="400">
+                        <div>BHA</div>
+                        <img class="open-dialog dialog-bha" src="./src/images/dark-book.svg" width="70" height="70"
+                            alt="book icon" />
+                    </div>
+                    <div class="vitamin-card" data-aos="fade-down" data-aos-delay="500">
+                        <div>Niacinamide</div>
+                        <img class="open-dialog dialog-niacinamide" src="./src/images/dark-book.svg" width="70"
+                            height="70" alt="book icon" />
+                    </div>
+                    <div class="vitamin-card" data-aos="fade-down" data-aos-delay="600">
+                        <div>Benzoyl Peroxide</div>
+                        <img class="open-dialog dialog-benzoyl" src="./src/images/dark-book.svg" width="70" height="70"
+                            alt="book icon" />
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a href="#shopping-guide" onclick="handleChangeSection(3)">
+                        <sl-icon-button name="arrow-right-circle" label="Go"
+                            style="font-size: 3.5rem; color: white"></sl-icon-button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOPING GUIDE SECTION -->
+        <section class="guide main-section section section-3" id="shopping-guide">
+            <div class="container padding">
+                <button class="home-button">
+                    <img src="./src/images/home.svg" width="70" height="70" alt="home icon" />
+                </button>
+                <h2>SKINCARE SHOPPING GUIDE</h2>
+            </div>
+        </section>
+        <section class="section section-3">
+            <div class="guide-descriptions"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container padding">
+            <div class="footer__nav">
+                <a href="/" class="logo">SKINCIPE.</a>
+                <a class="link" onclick="handleChangeHome()" href="#skin-concern">Skin Concern</a>
+                <a class="link" onclick="handleChangeSection(2)" href="#skincare-recipes">Skincare Recipes</a>
+                <a class="link" onclick="handleChangeSection(3)" href="#shopping-guide">Shopping Guide</a>
+            </div>
+            <div class="footer__info">
+                <div class="socmed-container">
+                    <a href="#" class="socmed">
+                        <img src="./src/images/fb.svg" alt="facebook icon" />
+                    </a>
+                    <a href="#" class="socmed">
+                        <img src="./src/images/ig.svg" alt="instagram icon" />
+                    </a>
+                    <a href="#" class="socmed">
+                        <img src="./src/images/pinterest.svg" alt="pinterest icon" />
+                    </a>
+                </div>
+                <p class="">
+                    Explore the world of skincare with our expert tips and advice. Unlock the
+                    secrets to healthy, radiant skin and discover the perfect routine for your
+                    unique needs. Join our skincare community and embark on a journey to your
+                    best skin ever. Stay informed, stay beautiful!
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT SECTION FOR GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
+
+    <script src="./src/js/animation-initiator.js"></script>
+</body>
+
+</html>

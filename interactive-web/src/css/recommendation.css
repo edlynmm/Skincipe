@@ -1,0 +1,165 @@
+/* ROUTINE SKIN CARE */
+.routine {
+    background-color: var(--gray-2);
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+
+.routine h2 {
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 80px;
+    padding-top: 100px;
+}
+
+.routine-container {
+    display: grid;
+}
+
+.routine-container .row-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.routine-container .item {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 32px;
+    padding: 32px;
+    border-bottom: 1px solid white;
+}
+
+.routine-container .item.last {
+    border-bottom: none;
+}
+
+.routine-container .item div {
+    font-size: 32px;
+}
+
+.routine-container button {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.routine-container button img {
+    height: 40px;
+    width: 40px;
+}
+
+.book-btn,
+.open-dialog {
+    cursor: pointer;
+}
+
+.book-btn:hover img,
+.open-dialog:hover {
+    transition: all 300ms;
+    transform: scale(1.1);
+}
+
+.item .name {
+    flex-shrink: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.home-button {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+    .home-button {
+        top: -40px;
+        left: 20px;
+    }
+
+    .home-button img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .home-button:hover {
+        transform: scale(1.1);
+    }
+
+    .routine {
+        background-color: var(--gray-2);
+        padding: 100px 0;
+        color: white;
+        position: relative;
+    }
+
+    .routine.section .container.padding {
+        padding: 24px;
+    }
+
+    .routine h2 {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 110%;
+    }
+
+    .routine-container .row-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .routine-container .item {
+        gap: 20px;
+    }
+    .routine-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .routine-container .item div {
+        font-size: 16px;
+    }
+
+    .routine-container button {
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .routine-container button img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .book-btn,
+    .open-dialog {
+        cursor: pointer;
+    }
+
+    .book-btn:hover img,
+    .open-dialog:hover {
+        transition: all 300ms;
+        transform: scale(1.1);
+    }
+
+    .item .name {
+        flex-shrink: 0;
+    }
+}
